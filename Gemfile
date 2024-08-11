@@ -36,6 +36,24 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "simple_form"
+
+gem "str_enum"
+
+gem "select2-rails"
+
+gem "ransack"
+
+gem "cpf_cnpj"
+
+gem "wicked_pdf"
+
+gem "wkhtmltopdf-binary"
+
+gem "htmlbeautifier"
+
+gem "numbers_and_words"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
