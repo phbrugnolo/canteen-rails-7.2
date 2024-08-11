@@ -365,6 +365,7 @@ __metadata:
     bootstrap: "npm:^5.3.3"
     bootstrap-icons: "npm:^1.11.3"
     esbuild: "npm:^0.23.0"
+    esbuild-rails: "npm:^1.0.7"
     nodemon: "npm:^3.1.4"
     postcss: "npm:^8.4.41"
     postcss-cli: "npm:^11.0.0"
@@ -637,6 +638,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esbuild-rails@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "esbuild-rails@npm:1.0.7"
+  dependencies:
+    fast-glob: "npm:^3.2.12"
+  peerDependencies:
+    esbuild: "*"
+  checksum: 10c0/93df8cabbfbdceba5c7a3dc038d3c0b6b68a8e117538a341649dd04433ba5c548743533d0d2f92a991b25c7550749b10ff3d536bc3b15a2dc16c632c23988eb2
+  languageName: node
+  linkType: hard
+
 "esbuild@npm:^0.23.0":
   version: 0.23.0
   resolution: "esbuild@npm:0.23.0"
@@ -734,7 +746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.3.2":
+"fast-glob@npm:^3.2.12, fast-glob@npm:^3.3.2":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
