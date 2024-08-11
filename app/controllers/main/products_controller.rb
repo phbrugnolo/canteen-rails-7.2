@@ -3,7 +3,8 @@ class Main::ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.order(status: :asc)
+    @q = Product.ransack(params[:q])
+    @products = @q.result.order(status: :asc)
   end
 
   # GET /products/1 or /products/1.json
