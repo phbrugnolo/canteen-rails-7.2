@@ -38,3 +38,12 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+# Ignore yarn files
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+.yarnrc.yml
+yarn-error.log
