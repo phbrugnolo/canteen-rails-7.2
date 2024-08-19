@@ -23,7 +23,9 @@
     "@hotwired/turbo-rails": "^8.0.5",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3"
+    "bootstrap-icons": "^1.11.3",
+    "jquery": "^3.7.1",
+    "jquery-mask-plugin": "^1.14.16"
   },
   "browserslist": [
     "defaults"

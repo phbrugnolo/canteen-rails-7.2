@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filterProducts();
 });
 
+// Nota esse trecho de código abaixo não está funcionando no momento, mas pode ter um hack improvisado adicionando essas duas funções diretamente no show.html.erb de products
 function showModal(modalId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
