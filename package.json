@@ -2,12 +2,13 @@
   "name": "app",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "esbuild": "^0.23.0",
+    "esbuild-rails": "^1.0.7",
     "nodemon": "^3.1.4",
-    "sass": "^1.77.8",
     "postcss": "^8.4.41",
     "postcss-cli": "^11.0.0",
-    "autoprefixer": "^10.4.20"
+    "sass": "^1.77.8"
   },
   "scripts": {
     "build": "node esbuild.config.mjs",
