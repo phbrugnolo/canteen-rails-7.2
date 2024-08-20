@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const searchNameInput = document.getElementById('search_name');
   const searchStatusSelect = document.getElementById('search_status');
   const productsContainer = document.getElementById('products');
@@ -27,14 +27,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   filterProducts();
 });
-
-// Nota esse trecho de código abaixo não está funcionando no momento, mas pode ter um hack improvisado adicionando essas duas funções diretamente no show.html.erb de products
-function showModal(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = "block";
-}
-
-function hideModal(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = "none";
-}

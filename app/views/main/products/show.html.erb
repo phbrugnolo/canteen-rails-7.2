@@ -22,7 +22,6 @@
           <div class="card-body text-center">
             <%= link_to "Voltar", main_products_path, class: "btn btn-secondary ms-1" %>
             <%= link_to "Editar", edit_main_product_path(@product), class: "btn btn-primary" %>
-
             <% if @product.status === "active" %>
               <button type="button" class="btn btn-danger me-1" onclick="showModal('confirmDeactivateModal')">Inativar</button>
             <% else %>
@@ -68,3 +67,14 @@
     </div>
   </div>
 </div>
+<script>
+  function showModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  }
+
+  function hideModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  }
+</script>

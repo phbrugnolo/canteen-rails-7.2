@@ -12,5 +12,8 @@
   "files.eol": "\n",
   "emmet.includeLanguages": {
     "erb": "html"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
