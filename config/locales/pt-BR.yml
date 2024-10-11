@@ -4,30 +4,41 @@ pt-BR:
   home: 'Home'
   exit: 'Sair'
   user: 'Usuário'
+  active: 'Ativo'
+  inactive: 'Inativo'
+  select_status: 'Selecione o status'
   errors:
     messages:
-      blank: "não pode ficar em branco"
-      invalid: "não é válido"
-      taken: "já está em uso"
-      too_short: "é muito curto (mínimo de %{count} caracteres)"
-      too_long: "é muito longo (máximo de %{count} caracteres)"
-      wrong_length: "não possui o tamanho correto (deve ter %{count} caracteres)"
-      not_a_number: "não é um número"
-      greater_than: "deve ser maior que %{count}"
-      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
-      equal_to: "deve ser igual a %{count}"
-      less_than: "deve ser menor que %{count}"
-      less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+      blank: "Não pode ficar em branco"
+      invalid: "Não é válido"
+      taken: "Já está em uso"
+      too_short: "É muito curto (mínimo de %{count} caracteres)"
+      too_long: "É muito longo (máximo de %{count} caracteres)"
+      wrong_length: "Não possui o tamanho correto (deve ter %{count} caracteres)"
+      not_a_number: "Não é um número"
+      greater_than: "Deve ser maior que %{count}"
+      greater_than_or_equal_to: "Deve ser maior ou igual a %{count}"
+      equal_to: "Deve ser igual a %{count}"
+      less_than: "Deve ser menor que %{count}"
+      less_than_or_equal_to: "Deve ser menor ou igual a %{count}"
+  form:
+    actions:
+      back: "Voltar"
+      submit: "Enviar"
   activerecord:
+    add: "Adicionar %{model}"
+    edit: "Editar %{model}"
+    delete: "Excluir %{model}"
     attributes:
       product:
         name: 'Nome'
         price: 'Preço'
-        quantity: 'Quantidade'
+        description: 'Descrição'
+        status: 'Status'
       customer:
         name: 'Nome'
-        email: 'E-mail'
-        phone: 'Telefone'
+        matriculation: 'Matrícula'
+        status: 'Status'
       sale:
         product: 'Produto'
         customer: 'Cliente'
