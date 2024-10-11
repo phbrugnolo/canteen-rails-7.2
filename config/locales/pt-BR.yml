@@ -1,0 +1,45 @@
+pt-BR:
+  title: 'Cantina - RD'
+  profile: 'Perfil'
+  home: 'Home'
+  exit: 'Sair'
+  user: 'Usuário'
+  errors:
+    messages:
+      blank: "não pode ficar em branco"
+      invalid: "não é válido"
+      taken: "já está em uso"
+      too_short: "é muito curto (mínimo de %{count} caracteres)"
+      too_long: "é muito longo (máximo de %{count} caracteres)"
+      wrong_length: "não possui o tamanho correto (deve ter %{count} caracteres)"
+      not_a_number: "não é um número"
+      greater_than: "deve ser maior que %{count}"
+      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+      equal_to: "deve ser igual a %{count}"
+      less_than: "deve ser menor que %{count}"
+      less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+  activerecord:
+    attributes:
+      product:
+        name: 'Nome'
+        price: 'Preço'
+        quantity: 'Quantidade'
+      customer:
+        name: 'Nome'
+        email: 'E-mail'
+        phone: 'Telefone'
+      sale:
+        product: 'Produto'
+        customer: 'Cliente'
+        quantity: 'Quantidade'
+        total: 'Total'
+    models:
+      product:
+        one: 'Produto'
+        other: 'Produtos'
+      customer:
+        one: 'Cliente'
+        other: 'Clientes'
+      sale:
+        one: 'Vender'
+        other: 'Vender'

@@ -1,9 +1,9 @@
-class CustomersController < ApplicationController
-  before_action :set_customer, only: %i[ show edit update destroy ]
+class Main::CustomersController < ApplicationController
+  before_action :set_customer, only: %i[ show edit update destroy deactivate activate ]
 
   # GET /customers or /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.order(:name)
   end
 
   # GET /customers/1 or /customers/1.json
@@ -55,6 +55,18 @@ class CustomersController < ApplicationController
       format.html { redirect_to customers_path, status: :see_other, notice: "Customer was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def activate
+    @customer.update(status: "active")
+    @customer.save!
+    redirect_to main_customers_path
+  end
+
+  def deactivate
+    @customer.update(status: "inactive")
+    @customer.save!
+    redirect_to main_customers_path
   end
 
   private

@@ -1,17 +1,30 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  resources :sales
-  resources :customers
-  resources :products
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  concern :activable do
+    member do
+      put :activate
+      put :deactivate
+    end
+  end
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  namespace :main, path: "", path_names: { new: "novo", create: "novo", edit: "editar", update: "editar" } do
+    root "dashboards#index"
 
-  # Render dynamic PWA files from app/views/pwa/*
-  get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-  get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
+    resources :sales, path: "vendas", except: %i[edit update]
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+    with_options concerns: [ :activable ], except: [ :destroy ] do
+      resources :products, path: "produtos"
+      resources :customers, path: "clientes"
+    end
+
+    resources :closing_periods, path: "fechamentos", except: %i[edit update destroy]
+
+    resources :reports, path: "relatorios" do
+      collection do
+        get :month_report, format: "pdf"
+        get :period_report, format: "pdf"
+      end
+    end
+  end
 end

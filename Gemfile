@@ -9,6 +9,8 @@ gem "simple_form"
 
 gem "byebug"
 
+gem "str_enum"
+
 gem "ransack"
 
 gem "wicked_pdf"

@@ -1,4 +1,4 @@
-class SalesController < ApplicationController
+class Main::SalesController < ApplicationController
   before_action :set_sale, only: %i[ show edit update destroy ]
 
   # GET /sales or /sales.json
@@ -12,7 +12,14 @@ class SalesController < ApplicationController
 
   # GET /sales/new
   def new
+    @customers = Customer.where(status: "active")
     @sale = Sale.new
+    @products = Product.where(status: "active")
+
+    respond_to do |format|
+      format.html
+      format.json { render json: { products: @products } }
+    end
   end
 
   # GET /sales/1/edit

@@ -1,9 +1,9 @@
-class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show edit update destroy ]
+class Main::ProductsController < ApplicationController
+  before_action :set_product, only: %i[ show edit update destroy deactivate activate ]
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    @products = Product.order(status: :asc)
   end
 
   # GET /products/1 or /products/1.json
@@ -55,6 +55,18 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_path, status: :see_other, notice: "Product was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def activate
+    @product.update(status: "active") # This line updates the status of the product to 'inactive'
+    @product.save!
+    redirect_to main_products_path
+  end
+
+  def deactivate
+    @product.update(status: "inactive") # This line updates the status of the product to 'inactive'
+    @product.save!
+    redirect_to main_products_path
   end
 
   private
