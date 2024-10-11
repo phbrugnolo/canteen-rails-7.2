@@ -1,0 +1,42 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.autoGuessEncoding": true,
+  "editor.detectIndentation": false,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.languageSettings": [
+    {
+      "languageId": "ruby",
+      "locale": "en,pt,pt_BR",
+      "allowCompoundWords": true
+    },
+    {
+      "languageId": "erb",
+      "locale": "en,pt,pt_BR",
+      "allowCompoundWords": true
+    },
+    {
+      "languageId": "html",
+      "locale": "en,pt,pt_BR",
+      "allowCompoundWords": true
+    }
+  ],
+  "cSpell.enabledLanguageIds": [
+    "ruby",
+    "erb",
+    "html",
+    "javascript",
+    "typescript",
+    "css",
+    "json",
+    "markdown"
+  ]
+}

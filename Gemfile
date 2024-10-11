@@ -4,6 +4,21 @@ source "https://rubygems.org"
 gem "rails", "~> 7.2.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+
+gem "simple_form"
+
+gem "byebug"
+
+gem "ransack"
+
+gem "wicked_pdf"
+
+gem "wkhtmltopdf-binary"
+
+gem "numbers_and_words"
+
+gem "htmlbeautifier"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
