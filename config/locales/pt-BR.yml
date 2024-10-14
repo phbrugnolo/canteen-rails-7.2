@@ -3,10 +3,23 @@ pt-BR:
   profile: 'Perfil'
   home: 'Home'
   exit: 'Sair'
+  return: 'Voltar'
+  cancel: 'Cancelar'
   user: 'Usuário'
   active: 'Ativo'
   inactive: 'Inativo'
+  activate: 'Ativar'
+  deactivate: 'Desativar'
+  confirm_activation: 'Confirmar Ativação'
+  confirm_deactivation: 'Confirmar Desativação'
+  product_activation: 'Tem certeza que deseja ativar o produto?'
+  product_deactivation: 'Tem certeza que deseja desativar o produto?'
   select_status: 'Selecione o status'
+  search_by_name: 'Pesquisar por nome'
+  add: 'Adicionar'
+  edit: 'Editar'
+  delete: 'Excluir'
+  show: 'Visualizar'
   errors:
     messages:
       blank: "Não pode ficar em branco"
@@ -29,6 +42,10 @@ pt-BR:
     add: "Adicionar %{model}"
     edit: "Editar %{model}"
     delete: "Excluir %{model}"
+    show: "Visualizar %{model}"
+    activate: "Ativar %{model}"
+    deactivate: "Desativar %{model}"
+    alt_image: "Imagem de %{model}"
     attributes:
       product:
         name: 'Nome'
