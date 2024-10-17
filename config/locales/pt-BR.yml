@@ -55,6 +55,7 @@ pt-BR:
       customer:
         name: 'Nome'
         matriculation: 'Matrícula'
+        password: 'Senha'
         status: 'Status'
       sale:
         product: 'Produto'

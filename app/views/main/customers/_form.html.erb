@@ -1,16 +1,17 @@
-
-<%= simple_form_for(@customer) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :matriculation %>
-    <%= f.input :status %>
-    <%= f.input :password %>
+<div class="container mx-auto w-50">
+  <div class="card p-4 mt-4" style="background-color: #EEF5FF">
+    <%= simple_form_for [:main, @customer] do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <div class="form-inputs">
+        <%= f.input :name, placeholder: placeholder: I18n.t(:name, scope: %i[activerecord attributes product]), required: true %>
+        <%= f.input :matriculation, placeholder: placeholder: I18n.t(:matriculation, scope: %i[activerecord attributes product]), required: true %>
+        <%= f.input :password, placeholder: placeholder: I18n.t(:password, scope: %i[activerecord attributes product]), required: true %>
+      </div>
+      <div class="form-actions float-end">
+        <%= link_to "Voltar", (request.referer.present? ? request.referer : main_customers_path), class: "btn btn-secondary mt-3 ms-2" %>
+        <%= f.button :submit, "Enviar", class: "btn btn-primary mt-3" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

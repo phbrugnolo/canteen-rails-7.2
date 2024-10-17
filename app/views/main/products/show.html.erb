@@ -1,8 +1,10 @@
+<h1 class='mx-2'><%= I18n.t(:product, scope: %i[activerecord models], count: 1) %></h1>
+<hr>
 <div class='container d-flex justify-content-center'>
-  <p style='color: green'><%= notice %></p>
-  <div class='card p-4 mt-4' style='background-color: #EEF5FF; width: 25rem;'>
+  <div class='card p-4 mt-3' style='background-color: #EEF5FF; width: 100%;'>
     <div class='d-flex w-100 h-100 justify-content-center align-items-center my-3'>
       <div class='m-auto'>
+        <p style='color: green'><%= notice %></p>
         <div class='card' style='width: 18rem;'>
           <img src='/assets/img-product.png' class='card-img-top mx-auto' alt='<%= I18n.t(:alt_image, scope: %i[activerecord], model: @product.model_name.human) %>' style='width: 12rem; height: 12rem;'>
           <div class='card-body'>
