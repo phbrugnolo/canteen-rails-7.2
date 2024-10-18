@@ -26,7 +26,6 @@
                     <h5 class="card-title ms-1"><%= @customer.name %></h5>
                     <ul class="list-group list-group-flush mt-2">
                       <li class="list-group-item"><%= I18n.t(:matriculation, scope: %i[activerecord attributes customer]) %>: <%= @customer.matriculation %></li>
-                      <li class="list-group-item">CPF: <%= @customer.cpf %></li>
                       <li class="list-group-item"><%= I18n.t(:status, scope: %i[activerecord attributes customer]) %>:
                         <% if @customer.status == 'active' %>
                           <span class="text-success border rounded border-success px-2 bg-success-subtle"><%= I18n.t(:active) %></span>
@@ -36,7 +35,7 @@
                       </li>
                     </ul>
                     <div class="card-body text-end" style="margin: 0px">
-                      <%= link_to I18n.t(:back), main_customers_path, class: "btn btn-secondary ms-1" %>
+                      <%= link_to I18n.t(:return), main_customers_path, class: "btn btn-secondary ms-1" %>
                       <%= link_to I18n.t(:edit), edit_main_customer_path(@customer), class: "btn btn-primary" %>
                       <% if @customer.status === "active" %>
                         <button type="button" class="btn btn-danger me-1" onclick="showModal('confirmDeactivateModal')"><%= I18n.t(:deactivate) %></button>
@@ -103,7 +102,6 @@
     ...
   </div>
 </div>
-
 <div id="confirmDeactivateModal" class="modal" onclick="hideModal('confirmDeactivateModal')">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" onclick="event.stopPropagation()">
@@ -121,7 +119,6 @@
     </div>
   </div>
 </div>
-
 <div id="confirmActivateModal" class="modal" onclick="hideModal('confirmActivateModal')">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" onclick="event.stopPropagation()">
@@ -152,24 +149,24 @@
 
 
   $('.show-cart').click(function() {
-      var cartTable = $(this).closest('.card').find('.cart-table');
-      cartTable.toggle();
+    var cartTable = $(this).closest('.card').find('.cart-table');
+    cartTable.toggle();
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-      const buttons = document.querySelectorAll(".show-cart");
+    const buttons = document.querySelectorAll(".show-cart");
 
-      buttons.forEach(button => {
-          button.addEventListener("click", function() {
-              const targetId = button.getAttribute("data-target");
-              const targetTable = document.getElementById(targetId);
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const targetId = button.getAttribute("data-target");
+            const targetTable = document.getElementById(targetId);
 
-              if (targetTable) {
-                  targetTable.classList.toggle("hidden");
-                  const buttonParent = button.parentNode.parentNode;
-                  buttonParent.classList.toggle("no-collapse");
-              }
-          });
-      });
+            if (targetTable) {
+                targetTable.classList.toggle("hidden");
+                const buttonParent = button.parentNode.parentNode;
+                buttonParent.classList.toggle("no-collapse");
+            }
+        });
+    });
   });
 </script>

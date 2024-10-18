@@ -4,6 +4,7 @@ class CreateCustomers < ActiveRecord::Migration[7.2]
       t.string :name
       t.string :matriculation
       t.string :status
+      t.string :image
       t.string :password
 
       t.timestamps

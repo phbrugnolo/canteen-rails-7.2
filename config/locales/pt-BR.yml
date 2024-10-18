@@ -10,6 +10,8 @@ pt-BR:
   inactive: 'Inativo'
   activate: 'Ativar'
   deactivate: 'Desativar'
+  documents: 'Documentos'
+  purchases: 'Compras'
   confirm_activation: 'Confirmar Ativação'
   confirm_deactivation: 'Confirmar Desativação'
   product_activation: 'Tem certeza que deseja ativar o produto?'

@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_11_190907) do
     t.string "name"
     t.string "matriculation"
     t.string "status"
+    t.string "image"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
