@@ -4,9 +4,9 @@
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <div class="form-inputs">
-        <%= f.input :name, placeholder: placeholder: I18n.t(:name, scope: %i[activerecord attributes product]), required: true %>
-        <%= f.input :matriculation, placeholder: placeholder: I18n.t(:matriculation, scope: %i[activerecord attributes product]), required: true %>
-        <%= f.input :password, placeholder: placeholder: I18n.t(:password, scope: %i[activerecord attributes product]), required: true %>
+        <%= f.input :name, placeholder: I18n.t(:name, scope: %i[activerecord attributes product]), required: true %>
+        <%= f.input :matriculation, placeholder: I18n.t(:matriculation, scope: %i[activerecord attributes product]), required: true %>
+        <%= f.input :password, placeholder: I18n.t(:password, scope: %i[activerecord attributes product]), required: true %>
       </div>
       <div class="form-actions float-end">
         <%= link_to "Voltar", (request.referer.present? ? request.referer : main_customers_path), class: "btn btn-secondary mt-3 ms-2" %>
