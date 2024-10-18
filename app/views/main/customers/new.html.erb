@@ -1,11 +1,4 @@
-<% content_for :title, "New customer" %>
-
-<h1>New customer</h1>
-
-<%= render "form", customer: @customer %>
-
+<h1 class='text-center mt-3'><%= I18n.t(:register, scope: %i[activerecord], model: @customer.model_name.human) %></h1>
+<hr>
+<%= render 'form', customer: @customer %>
 <br>
-
-<div>
-  <%= link_to "Back to customers", customers_path %>
-</div>

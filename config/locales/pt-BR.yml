@@ -46,6 +46,7 @@ pt-BR:
     activate: "Ativar %{model}"
     deactivate: "Desativar %{model}"
     alt_image: "Imagem de %{model}"
+    register: "Cadastrar %{model}"
     attributes:
       product:
         name: 'Nome'
