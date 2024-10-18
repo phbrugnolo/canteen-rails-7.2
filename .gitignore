@@ -29,7 +29,16 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
+/public/assets/*
+
+yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
