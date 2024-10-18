@@ -51,6 +51,8 @@
     const searchStatusSelect = document.getElementById('search_status');
     const productsContainer = document.getElementById('products');
 
+    if (!searchNameInput || !searchStatusSelect || !productsContainer) return console.log('Elements not found');
+
     function filterProducts() {
       const searchName = searchNameInput.value.trim().toLowerCase();
       const searchStatus = searchStatusSelect.value;
@@ -73,7 +75,6 @@
     searchNameInput.addEventListener('input', filterProducts);
     searchStatusSelect.addEventListener('change', filterProducts);
 
-    // Initial filtering
     filterProducts();
   });
 </script>
