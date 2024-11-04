@@ -7,8 +7,7 @@ class Main::SalesController < ApplicationController
   end
 
   # GET /sales/1 or /sales/1.json
-  def show
-  end
+  def show; end
 
   # GET /sales/new
   def new
@@ -23,8 +22,7 @@ class Main::SalesController < ApplicationController
   end
 
   # GET /sales/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /sales or /sales.json
   def create
@@ -32,7 +30,7 @@ class Main::SalesController < ApplicationController
 
     respond_to do |format|
       if @sale.save
-        format.html { redirect_to @sale, notice: "Sale was successfully created." }
+        format.html { redirect_to main_sale_url(@sale), notice: "Sale was successfully created." }
         format.json { render :show, status: :created, location: @sale }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -45,7 +43,7 @@ class Main::SalesController < ApplicationController
   def update
     respond_to do |format|
       if @sale.update(sale_params)
-        format.html { redirect_to @sale, notice: "Sale was successfully updated." }
+        format.html { redirect_to main_sale_url(@sale), notice: "Sale was successfully updated." }
         format.json { render :show, status: :ok, location: @sale }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -59,7 +57,7 @@ class Main::SalesController < ApplicationController
     @sale.destroy!
 
     respond_to do |format|
-      format.html { redirect_to sales_path, status: :see_other, notice: "Sale was successfully destroyed." }
+      format.html { redirect_to main_sales_path, status: :see_other, notice: "Sale was successfully destroyed." }
       format.json { head :no_content }
     end
   end
