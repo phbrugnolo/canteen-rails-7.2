@@ -110,11 +110,11 @@
         <button type="button" class="close" onclick="hideModal('confirmDeactivateModal')" style="position: absolute; top: 10px; right: 10px; background-color: transparent; border: none;">&times;</button>
       </div>
       <div class="modal-body">
-        <p><%= I18n.t(:confirm_deactivation_message) %></p>
+        <p><%= I18n.t(:customer_deactivation) %></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="hideModal('confirmDeactivateModal')" style="margin-right: auto;"><%= I18n.t(:cancel) %></button>
-        <%= button_to I18n.t(:deactivate_customer), deactivate_main_customer_path(@customer), method: :put, class: 'btn btn-danger' %>
+        <button type="button" class="btn btn-secondary" onclick="hideModal('confirmDeactivateModal')"><%= I18n.t(:cancel) %></button>
+        <%= button_to I18n.t(:deactivate, scope: %i[activerecord], model: @customer.model_name.human), deactivate_main_customer_path(@customer), method: :put, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
@@ -127,11 +127,11 @@
         <button type="button" class="close" onclick="hideModal('confirmActivateModal')" style="position: absolute; top: 10px; right: 10px; background-color: transparent; border: none;">&times;</button>
       </div>
       <div class="modal-body">
-        <p><%= I18n.t(:confirm_activation_message) %></p>
+        <p><%= I18n.t(:customer_activation) %></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="hideModal('confirmActivateModal')" style="margin-right: auto;"><%= I18n.t(:cancel) %></button>
-        <%= button_to I18n.t(:activate_customer), activate_main_customer_path(@customer), method: :put, class: 'btn btn-success' %>
+        <button type="button" class="btn btn-secondary" onclick="hideModal('confirmActivateModal')"><%= I18n.t(:cancel) %></button>
+        <%= button_to I18n.t(:activate, scope: %i[activerecord], model: @customer.model_name.human), activate_main_customer_path(@customer), method: :put, class: 'btn btn-success' %>
       </div>
     </div>
   </div>

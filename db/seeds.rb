@@ -32,7 +32,7 @@ Product.create([
 
 Customer.create([
   {
-    name: "Joao",
+    name: "João Nome Muito Grande Grande Grande Grande",
     matriculation: "123456",
     status: "active",
     password: "123456",
