@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :main, path: "", path_names: { new: "novo", create: "novo", edit: "editar", update: "editar" } do
     root "dashboards#index"
 
-    resources :sales, path: "vendas", except: %i[edit update]
+    resources :sales, path: "vendas", except: %i[edit update destroy]
 
     with_options concerns: [ :activable ], except: [ :destroy ] do
       resources :products, path: "produtos"

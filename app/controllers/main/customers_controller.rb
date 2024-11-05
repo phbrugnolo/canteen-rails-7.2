@@ -1,5 +1,5 @@
 class Main::CustomersController < ApplicationController
-  before_action :set_customer, only: %i[ show edit update destroy deactivate activate ]
+  before_action :set_customer, only: %i[ show edit update deactivate activate ] # Se precisar do destoy, adicionar ele no array de before_action
 
   # GET /customers or /customers.json
   def index
@@ -15,8 +15,7 @@ class Main::CustomersController < ApplicationController
   end
 
   # GET /customers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /customers or /customers.json
   def create
@@ -47,14 +46,14 @@ class Main::CustomersController < ApplicationController
   end
 
   # DELETE /customers/1 or /customers/1.json
-  def destroy
-    @customer.destroy!
+  # def destroy
+  #   @customer.destroy!
 
-    respond_to do |format|
-      format.html { redirect_to main_customers_path, status: :see_other, notice: "Customer was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html { redirect_to main_customers_path, status: :see_other, notice: "Customer was successfully destroyed." }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   def activate
     @customer.update(status: "active")

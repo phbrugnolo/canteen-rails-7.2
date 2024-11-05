@@ -73,6 +73,7 @@ pt-BR:
       sale:
         product: 'Produto'
         customer: 'Cliente'
+        customer_id: 'Cliente'
         quantity: 'Quantidade'
         total: 'Total'
     models:
@@ -84,4 +85,10 @@ pt-BR:
         other: 'Clientes'
       sale:
         one: 'Vender'
-        other: 'Vender'
+        other: 'Vendas'
+    errors:
+      models:
+        sale:
+          attributes:
+            customer:
+              blank: "O cliente não pode ficar em branco"

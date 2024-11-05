@@ -6,25 +6,25 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get sales_url
+    get main_sales_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_sale_url
+    get new_main_sale_url
     assert_response :success
   end
 
   test "should create sale" do
     assert_difference("Sale.count") do
-      post sales_url, params: { sale: { cart: @sale.cart, total_price: @sale.total_price } }
+      post main_sales_url, params: { sale: { cart: @sale.cart, total_price: @sale.total_price } }
     end
 
     assert_redirected_to sale_url(Sale.last)
   end
 
   test "should show sale" do
-    get sale_url(@sale)
+    get main_sale_url(@sale)
     assert_response :success
   end
 
@@ -43,6 +43,6 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
       delete sale_url(@sale)
     end
 
-    assert_redirected_to sales_url
+    assert_redirected_to main_sales_url
   end
 end

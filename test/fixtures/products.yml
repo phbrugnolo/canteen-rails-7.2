@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  image: MyString
-  status: MyString
-  price: 9.99
+  name: "Bala"
+  description: "7Belo"
+  image: Rails.root.join("app/assets/images/img-product.png")
+  status: "active"
+  price: 0.25
 
 two:
-  name: MyString
-  description: MyText
-  image: MyString
-  status: MyString
-  price: 9.99
+  name: "Trento"
+  description: "de Chocolate"
+  image: Rails.root.join("app/assets/images/img-product.png")
+  status: "active"
+  price: 0.50

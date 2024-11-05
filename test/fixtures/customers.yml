@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  matriculation: MyString
-  status: MyString
-  password: MyString
+  name: "John Doe"
+  matriculation: "123456"
+  status: "active"
+  password: "1234"
 
 two:
-  name: MyString
-  matriculation: MyString
-  status: MyString
-  password: MyString
+  name: "Giuseppe Camole"
+  matriculation: "654321"
+  status: "active"
+  password: "4321"

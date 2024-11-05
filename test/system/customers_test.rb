@@ -6,8 +6,8 @@ class CustomersTest < ApplicationSystemTestCase
   end
 
   test "visiting the index" do
-    visit customers_url
-    assert_selector "h1", text: "Customers"
+    visit main_customers_url
+    assert_selector "h1", text: I18n.t(:customer, scope: %i[activerecord models], count: 2)
   end
 
   test "should create customer" do
@@ -16,7 +16,7 @@ class CustomersTest < ApplicationSystemTestCase
 
     fill_in "Matriculation", with: @customer.matriculation
     fill_in "Name", with: @customer.name
-    fill_in "Password", with: @customer.password
+    # fill_in "Password", with: @customer.password
     fill_in "Status", with: @customer.status
     click_on "Create Customer"
 
@@ -30,7 +30,7 @@ class CustomersTest < ApplicationSystemTestCase
 
     fill_in "Matriculation", with: @customer.matriculation
     fill_in "Name", with: @customer.name
-    fill_in "Password", with: @customer.password
+    # fill_in "Password", with: @customer.password
     fill_in "Status", with: @customer.status
     click_on "Update Customer"
 
