@@ -1,5 +1,5 @@
 class Main::CustomersController < ApplicationController
-  before_action :set_customer, only: %i[ show edit update deactivate activate ] # Se precisar do destoy, adicionar ele no array de before_action
+  before_action :set_customer, only: %i[ show edit update deactivate activate ] # Se precisar do destroy, adicionar ele no array de before_action
 
   # GET /customers or /customers.json
   def index
